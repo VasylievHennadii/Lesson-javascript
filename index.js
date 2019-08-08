@@ -1,5 +1,28 @@
-// через prompt принимается число -> проверить простое ли оно
+// через prompt принимается число -> проверить простое ли оно (оба примера рабочие)
 
+// используем цикл while
+var answer = prompt('Проверка простого числа. Enter number');
+if (answer == 1) {
+    alert('false');
+}
+else if (answer > 1 && answer < 4) {
+    alert('простое');
+}
+else {
+    var d = 2;
+    while(d <= answer/2) {
+        if (answer % d === 0 && answer != d) {
+            str = 'false';
+            break;
+        } else {
+            str = 'простое';
+        }  
+        d = d + 1;              
+    }
+    alert(str);
+};
+
+// используем цикл for
 var answer = prompt('Проверка простого числа. Enter number');
 if (answer == 1) {
     alert('false');
@@ -21,7 +44,6 @@ else {
 
 
 
-
 // Принимается число -> вернуть целое ли оно или дробное (оба примера рабочие)
 
 var integerNumber = prompt('Проверка дробного числа. Enter number');
@@ -29,7 +51,7 @@ if ( parseInt(integerNumber) != integerNumber ) {
     alert("integerNumber дробное число");
 } else {
     alert("integerNumber целое число");
-}
+};
 
 var integerNumber = prompt('Проверка дробного числа. Enter number');
 var result = parseInt(integerNumber) != integerNumber ? 'integerNumber дробное число' : 'integerNumber целое число';
@@ -44,7 +66,7 @@ if (signNumber >= 0) {
     alert('positive numbers: "+"')
 } else {
     alert('negative numbers: "-"')
-}
+};
 
 var signNumber = prompt('Проверка знака числа. Enter number');
 var result = signNumber >= 0 ? 'positive numbers: "+"' : 'negative numbers: "-"';
@@ -74,6 +96,6 @@ else {
         answer = answer - 1;
     }
     alert(result)
-}
+};
 
 
