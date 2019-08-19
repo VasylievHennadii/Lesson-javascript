@@ -2,13 +2,17 @@
 
 console.log('Задание 3. Функция принимает количество часов (проверить что это число). Функция возвращает количество секунд в переданых часах');
 
-function convertHoursToSeconds (h) {
-    if (parseInt(h) === +h && +h >= 0) {
-        var sec = h * 60 *60;
-        console.log(sec);
-    } else {
-        alert('введите целое положительное число');
-    }  
-};
-var h = prompt ('enter');
-var result = convertHoursToSeconds (h);
+function convertHoursToSeconds(h) {
+  if (parseInt(h) === +h && +h >= 0) {
+    var sec = h * 60 * 60;
+
+    alert(sec);
+  } else {
+    alert('введите целое положительное число');
+  }
+}
+
+var h = prompt('Введите число');
+var result = convertHoursToSeconds(h);
+
+// 2 пробела отступы
