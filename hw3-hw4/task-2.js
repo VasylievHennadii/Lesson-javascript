@@ -3,24 +3,22 @@
 console.log('Задание 2. Функция принимает параметр min. Параметр должен являться числом. В нем лежит число от 0 до 59. Функция должна возвращать в какую четверть часа попадает это число (в первую, вторую, третью или четвертую)');
 
 function myMinSectorFunction(min) {
-    if (0 <= min && min <= 59 && typeof(min) === 'number') {
-        if (min >= 0 && min < 15){
-            return (1);
-        }
-        else if (min >= 15 && min < 30) {
-            return (2);
-        }
-        else if (min >= 30 && min < 45) {
-            return (3);
-        }
-        else if (min >= 45 && min <= 59) {
-            return (4);
-        }
+  if (0 <= min && min <= 59 && typeof(min) === 'number') {
+    if (min >= 0 && min < 15){
+      return 1;
+    } else if (min >= 15 && min < 30) {
+      return 2;
+    } else if (min >= 30 && min < 45) {
+      return 3;
+    } else if (min >= 45 && min <= 59) {
+      return 4;
     }
-    else {
-        return ('введите положительное число  от 0 до 59');
-    }    
-};
-var min = (28);
+  } else {
+    return 'введите положительное число  от 0 до 59';
+  }
+}
+
+var min = 28;
 var result = myMinSectorFunction(min);
+
 console.log(result);

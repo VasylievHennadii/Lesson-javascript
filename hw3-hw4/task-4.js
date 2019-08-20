@@ -3,24 +3,26 @@
 console.log('Задание 4. Функция принимает число n. Функция возвращает факториал данного числа. Факториал отрицательного числа - возвращает NaN. Факториал дробного числа возвращает NaN. Для 0 = 1. Проверить что аргумент является числом.');
 
 function myFactorial(n) {
-    if ( typeof (n) === 'number') {
-        if (n < 0 || parseInt(n) !== +n) {
-            return NaN;
-        }
-        else if (n === 0) {
-            return (1);
-        }
-        else {
-            var res = 1;
-            while (n) {
-                res = res * n;
-                n = n - 1;
-            }
-            return (res);
-        }
+  if (typeof n === 'number') {
+    if (n < 0 || parseInt(n) !== +n) {
+      return NaN;
+    } else if (n === 0) {
+      return (1);
+    } else {
+      var res = 1;
+
+      while (n) {
+        res = res * n;
+        n = n - 1;
+      }
+
+      return (res);
     }
-    else return ('введите число');
+  } else {
+    return 'введите число';
+  }
 }
-var n = (12);
+
+var n = 12;
 var result = myFactorial(n);
 console.log(result);
